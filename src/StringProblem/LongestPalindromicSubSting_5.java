@@ -1,5 +1,5 @@
 package StringProblem;
-public class LongestPalindromicSubSting {
+public class LongestPalindromicSubSting_5 {
     private static boolean isPalindromic(String str){
         int left = 0;
         int right = str.length()-1;
