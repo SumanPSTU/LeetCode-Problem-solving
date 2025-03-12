@@ -1,3 +1,5 @@
+package Others;
+
 public class Nusrat {
     public static void main(String[] args) {
 

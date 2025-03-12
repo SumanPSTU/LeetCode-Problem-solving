@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class LongestSubstring {
+public class LongestSubstring_3 {
     public static void main(String[] args) {
-        LongestSubstring l = new LongestSubstring();
+        LongestSubstring_3 l = new LongestSubstring_3();
         System.out.println(l.lengthOfLongestSubstring("abcdabcbb"));
+        System.out.println(l.OtherLongestSubstring("abcdabcbb"));
         System.out.println(l.OtherLongestSubstring("abcdabcdeabcdefg"));
     }
     public  int lengthOfLongestSubstring(String s) {
@@ -32,18 +33,18 @@ public class LongestSubstring {
     public int OtherLongestSubstring(String s){
         int start = 0;
         int end = 0;
-        int maxLength = 0;
-        HashSet<Character> hashSet = new HashSet<>();
+        int max = 0;
+        HashSet<Character> set = new HashSet<>();
         while (end<s.length()){
-            if (!hashSet.contains(s.charAt(end))){
-                hashSet.add(s.charAt(end));
+            if (!set.contains(s.charAt(end))){
+                set.add(s.charAt(end));
                 end++;
-                maxLength = Math.max(maxLength,hashSet.size());
+                max = Math.max(max,set.size());
             }else {
-                hashSet.remove(s.charAt(start));
+                set.remove(s.charAt(start));
                 start++;
             }
         }
-        return maxLength;
+        return max;
     }
 }
