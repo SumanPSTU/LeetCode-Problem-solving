@@ -1,4 +1,4 @@
-package StringProblem;
+package StringProblem.easy;
 
 public class LengthOfLastWord {
 
@@ -9,6 +9,6 @@ public class LengthOfLastWord {
     }
     public int lengthOfLastWord(String s) {
         String[] string = s.split(" ");
-        return string[string.length-1].toCharArray().length;
+        return string[string.length-1].length();
     }
 }
