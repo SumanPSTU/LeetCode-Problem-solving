@@ -18,7 +18,7 @@ public class PlusOne_66 {
             sum /= 10;
             c++;
         }
-        int[] array = new int[3];
+        int[] array = new int[c];
         for (int i = 0;i<array.length;i++){
             array[i] = stack.pop();
         }
@@ -27,7 +27,7 @@ public class PlusOne_66 {
     }
 
     public static void main(String[] args) {
-        int[] array = {9};
+        int[] array = {1,2,3};
         System.out.println(Arrays.toString(plusOne(array)));
     }
 }
